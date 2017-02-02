@@ -18,9 +18,21 @@ class ISBN_function < Minitest::Test
 		isbn_number = '1234X6789'
 		assert_equal(false, valid_length?(isbn_number))
 	end
+#testing function that removes spaces.
 	def test_remove_spaces
 		isbn_number = '123 4X67 890'
 		assert_equal('1234X67890', remove_spaces(isbn_number))
 	end
+#testing function that removes dashes and spaces.
+	def test_remove_dashes_spaces
+		isbn_number = '123-4X67 890'
+		assert_equal('1234X67890', remove_dashes_spaces(isbn_number))
+	end
+#testing function that 
+
+
+
+
+
 
 end
