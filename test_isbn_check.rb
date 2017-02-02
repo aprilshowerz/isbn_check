@@ -28,9 +28,21 @@ class ISBN_function < Minitest::Test
 		isbn_number = '123-4X67 890'
 		assert_equal('1234X67890', remove_dashes_spaces(isbn_number))
 	end
-#testing function that 
-
-
+#testing function that checks for alphabetical chars.
+	def test_check_for_letters_return_true
+		isbn_number = '12m34X67890'
+		assert_equal(true, check_for_letters(isbn_number))
+	end
+#testing function that checks for x or number at end. True
+	def test_check_for_num_or_x
+		isbn_number = '123456789x'
+		assert_equal(true, check_for_x(isbn_number))
+	end
+#testing function that checks for x or number at end. False
+	def test_check_for_num_or_x
+		isbn_number = '123456789B'
+		assert_equal(false, check_for_x(isbn_number))
+	end
 
 
 
