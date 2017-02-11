@@ -36,5 +36,10 @@ def test_valid_isbn13_with_spaces_and_hyphens_returns_true
         assert_equal(true, valid_isbn?("978 0 471 48648 0"))
 end
 
+def test_invalid_isbn_13_returns_false
+        assert_equal(false, valid_isbn?("4780470059029"))
+end
+
+
 
 end
