@@ -44,5 +44,11 @@ def test_convert_string_to_array_characters
         assert_equal(["1","2","3","4","5","6","7"], convert_string_to_array("1234567"))
 end
 
+def test_multiply_array_by_1_and_3
+        assert_equal([1,3,1,3,1,3], multiply_array(["1","1","1","1","1","1"]))
+        assert_equal([2,9,4,15,6], multiply_array(["2","3","4","5","6"]))
+end
+
+
 
 end
