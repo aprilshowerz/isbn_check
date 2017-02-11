@@ -10,8 +10,20 @@ class TestIsbnChecker < Minitest::Test
         assert_equal(false, valid_isbn?("12345678912345"))
     end
 
+    def test_valid_isbn10_returns_true
+        assert_equal(true, valid_isbn?("0471958697"))
+    end
 
+    def correct_length?(input_string)
+    if input_string.length == 10 && contains_non_numerical_characters?(input_string[0...8]) == false
+        isbn_10_math?(input_string)
+    elsif input_string.length == 13 && contains_non_numerical_characters?(input_string) == false
+        isbn13_math?(input_string)
 
+    else    
+        false
+    end
+end   
 
 
 end
