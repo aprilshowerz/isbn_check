@@ -49,3 +49,14 @@ def isbn_10_math?(number)
     end    
 end
 
+def isbn13_math?(string)
+    isbn_13_array = convert_string_to_array(string)
+    multiply = multiply_array(isbn_13_array)
+    summed = sum_of_items(multiply)
+       sub = subtraction(summed)
+    if sub == string[-1].to_i
+        true
+    else
+        false
+    end    
+end
