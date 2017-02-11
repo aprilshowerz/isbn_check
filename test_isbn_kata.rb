@@ -87,4 +87,13 @@ def test_invalid_isbn
         assert_equal(false, valid_isbn?("0471258697"))
     end
 
+def test_valid_isbn
+        assert_equal(true, valid_isbn?("0471958697"))
+        assert_equal(true, valid_isbn?("0-321-14653-0"))
+        assert_equal(true, valid_isbn?("877195869x"))
+        assert_equal(true, valid_isbn?("9780470059029"))
+        assert_equal(true, valid_isbn?("978-0-13-149505-0"))
+        assert_equal(true, valid_isbn?("978 0 471 48648 0"))
+    end
+
 end
