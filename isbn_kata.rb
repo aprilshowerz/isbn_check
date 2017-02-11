@@ -88,3 +88,11 @@ def sum_of_items(array_of_numbers)
     sum 
 end
 
+def subtraction(number)
+    sum = number%10
+    mod_result = 10 - sum
+    final_result = mod_result%10
+end
+
+
+
