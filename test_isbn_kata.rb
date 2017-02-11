@@ -40,6 +40,9 @@ def test_invalid_isbn_13_returns_false
         assert_equal(false, valid_isbn?("4780470059029"))
 end
 
+def test_convert_string_to_array_characters
+        assert_equal(["1","2","3","4","5","6","7"], convert_string_to_array("1234567"))
+end
 
 
 end
