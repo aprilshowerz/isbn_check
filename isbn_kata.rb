@@ -11,3 +11,7 @@ end
 def test_valid_isbn10_with_spaces_returns_true
         assert_equal(true, valid_isbn?("047 1958 697"))
 end
+
+def test_valid_isbn10_with_hyphens_returns_true
+        assert_equal(true, valid_isbn?("0-321-14653-0"))
+end
