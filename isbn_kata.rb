@@ -60,3 +60,21 @@ def isbn13_math?(string)
         false
     end    
 end
+
+def convert_string_to_array(string)
+    string.split("") 
+end
+
+def multiply_array(input_array)
+    array = []
+    input_array.each_with_index do |value, index|
+        value = value.to_i
+        if index % 2 == 0 
+         array << value * 1
+        else
+         array << value * 3
+        end    
+    end    
+    array    
+end 
+
