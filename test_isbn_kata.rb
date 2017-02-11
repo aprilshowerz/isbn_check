@@ -62,7 +62,13 @@ end
  def test_isbn_13_checksum
         assert_equal(true, isbn13_math?("9780470059029"))
         assert_equal(true, isbn13_math?("9780131495050"))
-    end
+end
+
+def test_isbn_10_multiply_sum
+        assert_equal(232, isbn_10("7421394761"))
+        assert_equal(254, isbn_10("5478931865"))
+end
+
 
 
 end
