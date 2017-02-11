@@ -94,5 +94,12 @@ def subtraction(number)
     final_result = mod_result%10
 end
 
+def contains_non_numerical_characters?(string)
+    if string =~/\D/
+        true
+    else 
+        false
+    end
+end
 
 
