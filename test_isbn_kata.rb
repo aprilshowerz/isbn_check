@@ -54,4 +54,11 @@ def test_sum_all_but_last_items_in_array
         assert_equal(18, sum_of_items([5,6,7,8]))
 end 
 
+def test_module_10_subtraction_result
+        assert_equal(4, subtraction(26))
+        assert_equal(0, subtraction(10))
+end
+
+
+
 end
