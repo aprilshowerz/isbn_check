@@ -74,4 +74,10 @@ def test_isbn_10_mod_11
         assert_equal(2, isbn_10_mod_11(376))
 end  
 
+ def test_isbn_10_containing_x
+        assert_equal(true, isbn_10_math?("877195869x"))
+        assert_equal(false, isbn_10_math?("877195869@"))
+    end
+
+
 end
