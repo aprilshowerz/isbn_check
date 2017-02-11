@@ -78,3 +78,13 @@ def multiply_array(input_array)
     array    
 end 
 
+def sum_of_items(array_of_numbers)
+    sum = 0
+    items_to_be_summed = array_of_numbers.length - 1
+    array_of_numbers.each_with_index do |value, index|
+     break if index == items_to_be_summed
+     sum = sum + value    
+    end
+    sum 
+end
+
