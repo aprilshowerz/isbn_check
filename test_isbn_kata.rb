@@ -49,6 +49,9 @@ def test_multiply_array_by_1_and_3
         assert_equal([2,9,4,15,6], multiply_array(["2","3","4","5","6"]))
 end
 
-
+def test_sum_all_but_last_items_in_array
+        assert_equal(6, sum_of_items([1,2,3,4]))
+        assert_equal(18, sum_of_items([5,6,7,8]))
+end 
 
 end
