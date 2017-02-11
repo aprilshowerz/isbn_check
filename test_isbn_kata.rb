@@ -59,6 +59,10 @@ def test_module_10_subtraction_result
         assert_equal(0, subtraction(10))
 end
 
+ def test_isbn_13_checksum
+        assert_equal(true, isbn13_math?("9780470059029"))
+        assert_equal(true, isbn13_math?("9780131495050"))
+    end
 
 
 end
