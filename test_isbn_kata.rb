@@ -25,5 +25,15 @@ class TestIsbnChecker < Minitest::Test
     end
 end   
 
+def isbn_10(string)
+    sum = 0
+    isbn_array_10 = convert_string_to_array(string)
+    isbn_array_10.each_with_index do |value, index|
+     value = value.to_i
+     break if index == 9
+     sum += value * (index + 1)
+    end
+    sum
+end
 
 end
