@@ -7,3 +7,7 @@ def remove_invalid_characters(input_string)
     no_spaces = input_string.delete(" ")
     no_hyphens = no_spaces.delete("-")
 end
+
+def test_valid_isbn10_with_spaces_returns_true
+        assert_equal(true, valid_isbn?("047 1958 697"))
+end
