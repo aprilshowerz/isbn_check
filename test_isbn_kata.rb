@@ -36,4 +36,10 @@ def isbn_10(string)
     sum
 end
 
+def isbn_10_mod_11(number)
+    checksum = number%11
+end
+
+
+
 end
