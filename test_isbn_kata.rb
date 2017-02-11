@@ -69,6 +69,9 @@ def test_isbn_10_multiply_sum
         assert_equal(254, isbn_10("5478931865"))
 end
 
-
+def test_isbn_10_mod_11
+        assert_equal(1, isbn_10_mod_11(232))
+        assert_equal(2, isbn_10_mod_11(376))
+end  
 
 end
