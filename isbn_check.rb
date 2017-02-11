@@ -12,7 +12,7 @@ def remove_spaces(isbn_number)
 	# or isbn_number.delete(" ")
 end
 
-def remove_dashes_spaces(isbn_number)
+def remove_dashes_spaces(isbn_number) 
 
 		isbn_number.delete! (" " "-")
 
@@ -29,7 +29,7 @@ def remove_dashes_spaces(isbn_number)
 
 end
 
-def check_for_letters(letters)
+def check_for_letters(letters) #change letters to string
 	
 	!!letters.match(/[a-z A-Z]/) #!! returns true or false
 	
@@ -42,7 +42,7 @@ def check_for_letters(letters)
 	#end
 end
 
-def check_for_x(x_at_end)
+def check_for_x(x_at_end) 
 
 	x_at_end.upcase
 
