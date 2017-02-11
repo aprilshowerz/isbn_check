@@ -8,26 +8,44 @@ def remove_invalid_characters(input_string)
     no_hyphens = no_spaces.delete("-")
 end
 
-def test_valid_isbn10_with_spaces_returns_true
-        assert_equal(true, valid_isbn?("047 1958 697"))
+
+
+def correct_length?(input_string)
+    if input_string.length == 10 && contains_non_numerical_characters?(input_string[0...8]) == false
+        isbn_10_math?(input_string)
+    elsif input_string.length == 13 && contains_non_numerical_characters?(input_string) == false
+        isbn13_math?(input_string)
+
+    else    
+        false
+    end
+end   
+
+def isbn_10(string)
+    sum = 0
+    isbn_array_10 = convert_string_to_array(string)
+    isbn_array_10.each_with_index do |value, index|
+     value = value.to_i
+     break if index == 9
+     sum += value * (index + 1)
+    end
+    sum
 end
 
-def test_valid_isbn10_with_hyphens_returns_true
-        assert_equal(true, valid_isbn?("0-321-14653-0"))
+def isbn_10_mod_11(number)
+    checksum = number%11
 end
 
-def test_valid_isbn10_with_spaces_and_hyphens_returns_true
-        assert_equal(true, valid_isbn?(" 047-1958 697-"))
+def isbn_10_math?(number)
+    sum = isbn_10(number)
+    checksum = isbn_10_mod_11(sum)
+    
+    if checksum == 10 && number[-1].upcase == "X"
+        true
+    elsif checksum == number[-1].to_i
+        true
+    else    
+        false
+    end    
 end
-
-def test_valid_isbn13_returns_true
-        assert_equal(true, valid_isbn?("9780470059029"))
-end
-
-def test_valid_isbn13_with_spaces_and_hyphens_returns_true
-        assert_equal(true, valid_isbn?("-9  7---80470059029"))
-        assert_equal(true, valid_isbn?("978-0-13-149505-0"))
-        assert_equal(true, valid_isbn?("978 0 471 48648 0"))
-end
-
 
