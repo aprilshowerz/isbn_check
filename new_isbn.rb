@@ -114,3 +114,19 @@ even = 2
 		end
 		valid
 end
+
+def valid_isbn?(isbn_string)
+	# replace a zero with illegal char, gives false positive.
+
+	# takes in string, returns boolean	
+	# isbn_string_no_spaces_or_dashes = remove_spaces_and_dashes(isbn_string)
+	# 	if isbn_string_no_spaces_or_dashes.length == 10
+	# 		check_for_letters(isbn_string_no_spaces_or_dashes)
+	# 		check_for_symbols(isbn_string_no_spaces_or_dashes)
+	# 		check_for_x(isbn_string_no_spaces_or_dashes)
+	# 		compare_check_digit(isbn_string_no_spaces_or_dashes)
+	# 	else
+	# 		false
+	# 	end
+		true	
+end
